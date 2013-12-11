@@ -86,9 +86,9 @@ abstract class AbstractModel {
 	private function _setDefaultProperties() {
 		$data = array();
 
-		foreach ($this->_orm['mapping'] as $key => $config) {
+		foreach ($this->_orm['mapping'] as $prop => $config) {
 			if (isset($config[self::DEFAULT_VALUE])) {
-				$data[$key] = $config[self::DEFAULT_VALUE];
+				$data[$prop] = $config[self::DEFAULT_VALUE];
 			}
 		}
 
