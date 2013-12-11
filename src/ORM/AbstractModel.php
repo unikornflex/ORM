@@ -14,6 +14,9 @@ namespace UFO\Model\ORM;
  *
  *	DOCUMENTATION :
  *		http://www.php.net/manual/fr/function.settype.php
+ *
+ *	@TODO
+ *		find another signature for _hydrate
  */
 abstract class AbstractModel {
 
