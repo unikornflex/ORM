@@ -104,7 +104,7 @@ abstract class AbstractModel {
 			if (property_exists($this, $key)) {
 				$prop = $key;
 			} else {
-				$prop = $this->_getPropertyFromColumn($key);
+				$prop = $this->_getPropertyFromColumnName($key);
 
 				// nothing found - create a public property
 				if (false === $prop) {
@@ -143,7 +143,7 @@ abstract class AbstractModel {
 	 *	@param <string> column name
 	 *	@return false if not match found
 	 */
-	private function _getPropertyFromColumn($column) {
+	private function _getPropertyFromColumnName($column) {
 		foreach($this->_orm['mapping'] as $prop => $config) {
 			if ($column === $config[self::COLUMN]) {
 				return $prop;
